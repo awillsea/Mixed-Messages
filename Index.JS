@@ -4,9 +4,7 @@ const dateArray = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'
 const actionArray =[' stubb your toe','Win a half marathon','adopt a cat','forget your wallet','poop your pants','find a $100 bill on the ground','have the best meal of your life','accidently get your left sock wet on the way to work'];
 const reasonArray =['your breath smells','hard work does pay off','killer instincts.. duh','love heals all wounds','you didnt buy the homeless man you saw on the corner of the street a $2 burger, you greedy pig','Murcury is in retrograde'];
 
-//timeArray.forEach((time => {}))
-//console.log(timeArray.forEach(timeSelection))
-//findRandomTime(timeArray)
+// the function below finds a random time from my timeArray and returns it. i then set it = to const idk ( got lazy with the var name... come back and fix)
 const findRandomTime = (arr) => {
      let randomIndex = Math.floor(Math.random() * timeArray.length);
     //console.log(randomIndex)
@@ -16,6 +14,7 @@ const findRandomTime = (arr) => {
 };
 const idk = findRandomTime(timeArray);
 
+// same thing here as in line 7 but for date
 const findRandomDate = arr => {
     let randomIndex = Math.floor(Math.random() * dateArray.length);
     let randomDate = dateArray[randomIndex];
@@ -24,6 +23,7 @@ const findRandomDate = arr => {
 };
 const wuh = findRandomDate(dateArray);
 
+//same thing here as in line 7 but for action
 const findRandomAction = (arr) => {
     let randomIndex = Math.floor(Math.random() * actionArray.length);
     let randomAction = actionArray[randomIndex];
@@ -31,9 +31,9 @@ const findRandomAction = (arr) => {
     return randomAction;
 }
 const wee = findRandomAction(actionArray);
-//findRandomAction(actionArray);
-//const finalAction = findRandomAction(actionArray);
 
+
+// same thing here as in line 7 but for reason
 const findRandomReason = (arr) =>{
     let randomIndex = Math.floor(Math.random() * reasonArray.length);
     let randomReason = reasonArray[randomIndex];
@@ -42,8 +42,10 @@ const findRandomReason = (arr) =>{
 }
 const poop = findRandomReason(reasonArray);
 
+//used the interpolation? (think thats how you spell it.) below. at first i was trying to create a function that would read off everything, but went this route instead. Play around next time and come up with a function 
 const msg = `at ${idk} on ${wuh} you will ${wee} because ${poop}`;
 console.log(msg)
+// Below was a rough draft function i was playing around with until i decided to go with the code above
 //console.log(findRandomTime(timeArray), + findRandomDate(dateArray), + findRandomAction(actionArray), + findRandomReason(reasonArray))
 
 
